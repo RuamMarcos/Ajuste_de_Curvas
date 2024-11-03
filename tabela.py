@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
 
+#Cria a tabulação de uma reta, dada uma série de pontos e o nome.
 def tabular_reta(pts, reta, nome):
     tabela_reta = [[f"{nome} = {reta[0]}", " "]]
 
@@ -16,7 +17,7 @@ def tabular_reta(pts, reta, nome):
 
     return tabela_reta
 
-
+#Faz a tabulação do pontos em uma tabela
 def tabular_pontos(pts):
     pontos = []
     n = 0
@@ -53,6 +54,8 @@ def imprimir_tabela(tabela):
     for j in range(0, len(tabela[0])):  
            print(f"| {tabela[0][j]} | {tabela[1][j]} | {tabela[2][j]} | {tabela[3][j]} | ")
 
+
+#FALTA GERAR O GRÁFICO COMO FOI EXIGIDO
 def salvar_imagem_tb(tb):
     for i in tb:
         df = pd.DataFrame(i)
